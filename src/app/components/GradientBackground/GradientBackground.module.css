@@ -1,0 +1,175 @@
+.container {
+  position: relative;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.gradient-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1; /* Place behind the content */
+}
+
+.content {
+  position: relative;
+  z-index: 1; /* Place on top of the gradient background */
+  display: flex; /* Optional: Customize based on your layout needs */
+  justify-content: center; /* Optional: Center content horizontally */
+  align-items: center; /* Optional: Center content vertically */
+  width: 100%;
+  height: 100%;
+}
+
+.gradients-container {
+  filter: url(#goo) blur(40px);
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.g1 {
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba(113, 114, 110, 0.8) 0,
+      rgba(21, 21, 21, 0) 50%
+    )
+    no-repeat;
+  mix-blend-mode: hard-light;
+  width: 90%;
+  height: 90%;
+  top: calc(50% - 40%);
+  left: calc(50% - 40%);
+  transform-origin: center center;
+  animation:
+    moveVertical 30s ease infinite,
+    fadeOpacity 10s ease-in-out infinite;
+}
+
+.g2 {
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba(113, 114, 110, 0.8) 0,
+      rgba(21, 21, 21, 0) 50%
+    )
+    no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80%;
+  height: 80%;
+  top: calc(50% - 40%);
+  left: calc(50% - 40%);
+  transform-origin: calc(50% - 600px);
+  animation:
+    moveInCircle 20s reverse infinite,
+    fadeOpacity 12s ease-in-out infinite;
+}
+
+.g3 {
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba(143, 143, 143, 0.8) 0,
+      rgba(100, 220, 255, 0) 50%
+    )
+    no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80%;
+  height: 80%;
+  top: calc(50% - 40% + 200px);
+  left: calc(50% - 40% - 500px);
+  transform-origin: calc(50% + 600px);
+  animation:
+    moveInCircle 40s linear infinite,
+    fadeOpacity 15s ease-in-out infinite;
+}
+
+.g4 {
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba(102, 102, 102, 0.8) 0,
+      rgba(200, 50, 50, 0) 50%
+    )
+    no-repeat;
+  mix-blend-mode: hard-light;
+  width: 80%;
+  height: 80%;
+  top: calc(50% - 40%);
+  left: calc(50% - 40%);
+  transform-origin: calc(50% - 200px);
+  animation:
+    moveHorizontal 40s ease infinite,
+    fadeOpacity 18s ease-in-out infinite;
+}
+
+.g5 {
+  position: absolute;
+  background: radial-gradient(
+      circle at center,
+      rgba(180, 180, 50, 0.8) 0,
+      rgba(180, 180, 50, 0) 50%
+    )
+    no-repeat;
+  mix-blend-mode: hard-light;
+  width: 160%;
+  height: 160%;
+  top: calc(50% - 80%);
+  left: calc(50% - 80%);
+  transform-origin: calc(50% - 800px) calc(50% + 200px);
+  animation:
+    moveInCircle 20s ease infinite,
+    fadeOpacity 20s ease-in-out infinite;
+}
+
+@keyframes fadeOpacity {
+  0% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes moveInCircle {
+  0% {
+    transform: rotate(0deg);
+  }
+  50% {
+    transform: rotate(180deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes moveVertical {
+  0% {
+    transform: translateY(-50%);
+  }
+  50% {
+    transform: translateY(50%);
+  }
+  100% {
+    transform: translateY(-50%);
+  }
+}
+
+@keyframes moveHorizontal {
+  0% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+  50% {
+    transform: translateX(50%) translateY(10%);
+  }
+  100% {
+    transform: translateX(-50%) translateY(-10%);
+  }
+}

@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Plus_Jakarta_Sans, Roboto_Mono } from "next/font/google";
 import "./globals.css";
+import GradientBackground from "@/app/components/GradientBackground";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   subsets: ["latin"],
@@ -27,7 +28,7 @@ export default function RootLayout({
       <body
         className={`${plusJakartaSans.className} ${robotoMono.className} antialiased`}
       >
-        {children}
+        <GradientBackground>{children}</GradientBackground>
       </body>
     </html>
   );
