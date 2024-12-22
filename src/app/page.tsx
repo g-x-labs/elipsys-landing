@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -9,18 +10,19 @@ export default function Home() {
       <main className="row-start-2 flex flex-col items-center gap-y-8">
         <Image
           src="/elipsys.svg"
-          alt="Next.js logo"
+          alt="Elipsys logo"
           width={240}
           height={38}
+          style={{ width: "240px", height: "auto" }}
           priority
         />
       </main>
       <footer className="row-start-3 flex flex-wrap items-center justify-center gap-6">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
+        <Link
+          href="https://x.com/"
           target="_blank"
           rel="noopener noreferrer"
+          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
         >
           <Image
             className="fill-gray-50"
@@ -29,8 +31,9 @@ export default function Home() {
             alt="Twitter icon"
             width={24}
             height={24}
+            style={{ width: "24px", height: "auto" }}
           />
-        </a>
+        </Link>
       </footer>
     </div>
   );
