@@ -14,7 +14,7 @@ const robotoMono = Roboto_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Elipsys Landing",
+  title: "Elipsys",
   description:
     "Elipsys: Transforming your digital experience with cutting-edge technology.",
 };
