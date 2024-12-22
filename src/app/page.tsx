@@ -23,13 +23,13 @@ export default function Home() {
           rel="noopener noreferrer"
         >
           <Image
+            className="fill-gray-50"
             aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
+            src="/twitter.svg"
+            alt="Twitter icon"
+            width={24}
+            height={24}
           />
-          Doc
         </a>
       </footer>
     </div>
